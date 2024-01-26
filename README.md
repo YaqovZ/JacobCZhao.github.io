@@ -1,2 +1,2 @@
-# JacobCZhao.github.io
+# Repo of personal website
 Personal website.
