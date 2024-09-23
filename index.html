@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Website</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Zhao - Personal Website</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -12,56 +11,65 @@
             padding: 0;
             color: #333;
             background-color: #f4f4f4;
+            line-height: 1.6;
         }
         header {
             background-color: #007bff;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
-        a {
-            color: #007bff;
-        }
-        a:hover {
-            color: #0056b3;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .content {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-        .project-list {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .project-links, .visuals {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            color: #007bff;
+        }
+        ul {
             list-style-type: none;
             padding: 0;
         }
-        .project-list li {
+        li {
             margin-bottom: 10px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img, iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
-        /* CSS for mobile devices */
-        @media only screen and (max-width: 900px) {
-            footer {
-                font-size: 12px; /* Smaller font size */
-                padding: 7px 0; /* Less padding */
-            }
-            footer a {
-                font-size: 12px; /* Ensure link also has smaller font size */
-            }
-            /* Adjust layout for other elements if needed */
-            h1, h2, p {
-                font-size: 16px; /* Smaller text for headers and paragraphs */
-            }
+        @media only screen and (max-width: 768px) {
             .content {
-                padding: 15px; /* Adjust content padding */
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -72,94 +80,52 @@
         <p>Technology Enthusiast | Data & ML Expert</p>
     </header>
 
+    <div class="container">
+        <div class="content">
+            <div class="project-links">
+                <h2>My Projects</h2>
+                
+                <h3>DSS Thesis</h3>
+                <ul>
+                    <li><a href="https://github.com/YaqovZ/TilburgUThesis/tree/main">Remittance Price Forecasting</a></li>
+                </ul>
 
- <div class="content">
-    <h2>Welcome to My Personal Website</h2>
-    <p>This is a place where I showcase my projects. In my Github you can see even more projects, regarding data management using SQL and XML!</p>
+                <h3>Natural Language Processing</h3>
+                <ul>
+                    <li><a href="https://github.com/YaqovZ/basic_chatbot_LLM">Creating a chatbot</a></li>
+                    <li><a href="https://github.com/YaqovZ/Speech_recog_summarizer">Creating a speech transcriber</a></li>
+                    <li><a href="https://github.com/YaqovZ/Yaqov_premier_league_scraper">Scraping data of football matches</a></li>
+                </ul>
 
+                <h3>Machine Learning and Deep Learning</h3>
+                <ul>
+                    <li><a href="https://github.com/YaqovZ/TiU_2023_deep_learning_project">Classification of skin lesions for medical diagnosis</a></li>
+                    <li><a href="https://github.com/YaqovZ/TiU_machine_learning_project">Prediction of publishing year using textual data</a></li>
+                    <li><a href="https://github.com/YaqovZ/heart_disease_machine_learning_knn">Heart Disease Prediction using KNN</a></li>
+                </ul>
 
-    <section id="thesis-projects">
-        <h3>DSS Thesis</h3>
-        <ul>
-            <li><a href="https://github.com/YaqovZ/TilburgUThesis/tree/main">Thesis Project: Remittance Price Forecasting</a></li>
-        </ul>
-    </section>
-     
-    <section id="nlp-projects">
-        <h3>Natural Language Processing Projects</h3>
-        <ul>
-            <li><a href="https://github.com/YaqovZ/basic_chatbot_LLM">Project: Creating a chatbot</a></li>
-            <li><a href="https://github.com/YaqovZ/Speech_recog_summarizer">Project: Creating a speech transcriber</a></li>
-            <li><a href="https://github.com/YaqovZ/Yaqov_premier_league_scraper">Project: Scraping data of football matches</a></li>
-        </ul>
-    </section>
-     
-
-<section id="data-visualization-projects">
-    <h3>Data Visualization Projects</h3>
-    <ul>
-        <li><a href="https://github.com/YaqovZ/Data_visualisation_euro_dollar_rate">Project: Visualising the change of Euro-Dollar exchange rate</a></li>
-        <li><img src="https://github.com/YaqovZ/Data_visualisation_euro_dollar_rate/raw/main/Eurodollar%20graph.png?raw=true" alt="Euro-Dollar Exchange Rate"></li>
-    </ul>
-</section>
-
-
-    <section id="ml-dl-projects">
-        <h3>Machine Learning and Deep Learning Projects</h3>
-        <ul>
-            <li><a href="https://github.com/YaqovZ/TiU_2023_deep_learning_project">University Project: Classification of skin legions for medical diagnosis</a></li>
-            <li><a href="https://github.com/YaqovZ/TiU_machine_learning_project">University Project: Prediction of publishing year using textual data</a></li>
-            <li><a href="https://github.com/YaqovZ/heart_disease_machine_learning_knn">Personal Project: Heart Disease Prediction using K-Nearest Neighbour Machine Learning Technique</li>
-        </ul>
-    </section>
-
-    <section id="business-projects">
-        <h3>Business and SQL Projects</h3>
-        <ul>
-            <li><a href="https://github.com/YaqovZ/SQL_customer_data_processing">Personal business project using SQL for best customer strategies</a></li>
-        </ul>
-    </section>
-</div>
-
-        .power-bi-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Jacob Zhao</h1>
-        <p>Technology Enthusiast | Data & ML Expert</p>
-    </header>
-
-    <div class="content">
-        <!-- ... (existing content remains unchanged) ... -->
-
-        <!-- Add this new section for the Power BI report -->
-        <section id="power-bi-report">
-            <h3>Power BI Dashboard</h3>
-            <div class="power-bi-container">
-                <iframe title="Power BI Jacob's Project 1 - GDP variation over time" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiN2FiZWVjNGEtM2M0Ni00Y2RiLWE1N2QtODI5NDg5ZjRhYjhiIiwidCI6IjQzODc1N2NmLWFiZTctNGYwNC1hMjdhLTZkY2Q4MzkwODQ5NyIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                <h3>Business and SQL</h3>
+                <ul>
+                    <li><a href="https://github.com/YaqovZ/SQL_customer_data_processing">SQL for best customer strategies</a></li>
+                </ul>
             </div>
-        </section>
+
+            <div class="visuals">
+                <h2>Data Visualizations</h2>
+                
+                <h3>Euro-Dollar Exchange Rate</h3>
+                <a href="https://github.com/YaqovZ/Data_visualisation_euro_dollar_rate">
+                    <img src="https://github.com/YaqovZ/Data_visualisation_euro_dollar_rate/raw/main/Eurodollar%20graph.png?raw=true" alt="Euro-Dollar Exchange Rate">
+                </a>
+
+                <h3>Power BI Dashboard</h3>
+                <iframe title="Power BI Jacob's Project 1 w dashboard" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiN2FiZWVjNGEtM2M0Ni00Y2RiLWE1N2QtODI5NDg5ZjRhYjhiIiwidCI6IjQzODc1N2NmLWFiZTctNGYwNC1hMjdhLTZkY2Q4MzkwODQ5NyIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+        </div>
     </div>
 
-    
     <footer>
-        <p>Contact me at: jacobzhao02@hotmail.com</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/chunxi-zhao-71707b193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer-link">LinkedIn</a></p>
+        <p>Contact me at: jacobzhao02@hotmail.com | Connect with me on <a href="https://www.linkedin.com/in/chunxi-zhao-71707b193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color: white;">LinkedIn</a></p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
