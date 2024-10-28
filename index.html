@@ -81,6 +81,51 @@
             bottom: 0;
             width: 100%;
         }
+        
+        
+        .gis-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .gis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gis-item {
+            text-align: center;
+        }
+        
+        .gis-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .gis-caption {
+            margin-top: 10px;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+@media only screen and (max-width: 1024px) {
+    .gis-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+
+
+
+        
         @media only screen and (max-width: 1024px) {
             .content {
                 grid-template-columns: 1fr;
@@ -144,6 +189,26 @@
                 <iframe title="Power BI Jacob's Project 1 w dashboard" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiN2FiZWVjNGEtM2M0Ni00Y2RiLWE1N2QtODI5NDg5ZjRhYjhiIiwidCI6IjQzODc1N2NmLWFiZTctNGYwNC1hMjdhLTZkY2Q4MzkwODQ5NyIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
             </div>
         </div>
+
+        <div class="power-bi-section">
+            <h2>Python-based GIS Visualisations</h2>
+            <div class="gis-container">
+                <div class="gis-grid">
+                    <div class="gis-item">
+                        <img src="https://github.com/YaqovZ/personal_website/blob/main/texas_above_avg.png?raw=true" alt="Density Graph">
+                        <p class="gis-caption">Texan Counties with Above-Average Population Density (2019 Estimation)</p>
+                    </div>
+                    
+                    <div class="gis-item">
+                        <img src="https://github.com/YaqovZ/personal_website/blob/main/texas_gender_ratio.png?raw=true" alt="Gender Ratio Graph">
+                    <p class="gis-caption">Texan Gender Ratio Density Heatmap by County (2019 Estimation)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+        
     </div>
 
     <footer>
